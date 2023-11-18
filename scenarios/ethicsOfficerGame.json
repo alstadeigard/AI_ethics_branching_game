@@ -1,0 +1,38 @@
+{
+  "scenarios": [
+    {
+      "id": "start",
+      "text": "Select an industry to evaluate:",
+      "choices": [
+        {
+          "text": "Technology",
+          "next": "tech1"
+        },
+        {
+          "text": "Healthcare",
+          "next": "health1"
+        },
+        {
+          "text": "Finance",
+          "next": "finance1"
+        }
+      ]
+    },
+    {
+      "id": "tech1",
+      "text": "Company A is using user data for targeted advertising. Do you approve?",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Data privacy is a concern. Here's why...",
+          "next": "tech2"
+        },
+        {
+          "text": "No",
+          "outcome": "Considering alternative models is important...",
+          "next": "tech3"
+        }
+      ]
+    }
+  ]
+}

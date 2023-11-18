@@ -1,0 +1,32 @@
+{
+  "scenarios": [
+    {
+      "id": "question1",
+      "text": "Do you decide to track user location?",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Tracking user location can lead to privacy concerns. Here's why...",
+          "next": "question2"
+        },
+        {
+          "text": "No",
+          "outcome": "Not tracking location respects user privacy, but might limit functionality...",
+          "next": "question3"
+        }
+      ]
+    },
+    {
+      "id": "question2",
+      "text": "Question 2 text here...",
+      "choices": [
+      ]
+    },
+    {
+      "id": "question3",
+      "text": "Question 3 text here...",
+      "choices": [
+      ]
+    }
+  ]
+}
