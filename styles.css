@@ -2,9 +2,11 @@
     text-align: center;
     margin: 20px;
 }
+
 #questionText, #resultText {
     margin-bottom: 20px;
 }
+
 button {
     margin: 5px;
     padding: 10px;
