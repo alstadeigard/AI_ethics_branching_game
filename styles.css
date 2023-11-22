@@ -1,80 +1,120 @@
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #fafafa;
-    color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Basic reset for relevant elements */
+* {
     margin: 0;
     padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f4f4f4;
     line-height: 1.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 #gameArea {
-    background: #fff;
-    margin: 2em auto;
-    padding: 2em;
-    max-width: 800px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-    border-left: 5px solid #5b5b5b;
-}
-
-#questionText {
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-    color: #5b5b5b;
-}
-
-#choicesContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1em;
-    margin-top: 2em;
-}
-
-button {
-    background: #5b5b5b;
-    color: #fff;
-    border: none;
-    padding: 1em;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    font-size: 1em;
+    background: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid #333; /* Sharp edges */
+    /* Removed border-radius for sharper corners */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+#questionText {
+    font-size: 1.25em;
+    margin-bottom: 1.5em;
+    color: #333;
+    font-weight: 700; /* Bold for headings */
+    text-align: center; /* Centered text */
+}
+
+#choicesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centered buttons */
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #333;
+    padding: 10px 25px;
+    margin: 10px 0; /* Vertical margin only for a cleaner look */
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    width: 100%; /* Full width buttons for a modern feel */
+    max-width: 250px; /* Maximum width for buttons */
+    /* Removed border-radius for sharper edges */
+}
+
+button:hover, button:focus {
+    background-color: #fff;
+    color: #333;
+    outline: none;
 }
 
 button:disabled {
-    background: #ccc;
-    cursor: not-allowed;
+    opacity: 0.5;
+    cursor: default;
 }
 
 #resultText {
-    font-style: italic;
-    background: #f7f7f7;
-    padding: 1em;
     margin-top: 2em;
-    border-radius: 5px;
-    border-left: 3px solid #5b5b5b;
+    background-color: #e8e8e8;
+    padding: 20px;
+    font-weight: 400;
+    text-align: center; /* Centered result text */
+    width: 100%;
+    /* Removed border-radius for sharper edges */
+    border-left: 4px solid #333;
 }
 
 @media (max-width: 768px) {
     #gameArea {
-        padding: 1em;
-        margin: 1em;
-    }
-
-    #choicesContainer {
-        grid-template-columns: 1fr;
+        width: 90%;
+        padding: 20px;
     }
 }
 
-/* Add custom cursor for buttons */
-button {
-    cursor: url('path-to-your-cursor-image.png'), auto;
+/* If any headings are used in additional content */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    font-weight: 700;
 }
 
+#progressBar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+}
 
+#progressBarFill {
+    height: 20px;
+    background-color: #4CAF50;
+    width: 0%; /* Initial width */
+    border-radius: 5px;
+}
+
+#gameIntro h2 {
+    text-align: center;
+}
+
+#gameIntro p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
