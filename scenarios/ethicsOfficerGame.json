@@ -1,38 +1,266 @@
 {
   "scenarios": [
     {
-      "id": "start",
-      "text": "Select an industry to evaluate:",
+      "id": "q1",
+      "text": "1 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
       "choices": [
         {
-          "text": "Technology",
-          "next": "tech1"
+          "text": "Yes",
+          "outcome": "Incorrect",
+          "next": "q2"
         },
         {
-          "text": "Healthcare",
-          "next": "health1"
-        },
-        {
-          "text": "Finance",
-          "next": "finance1"
+          "text": "No",
+          "outcome": "Correct",
+          "next": "q2"
         }
       ]
     },
     {
-      "id": "tech1",
-      "text": "Company A is using user data for targeted advertising. Do you approve?",
+      "id": "q2",
+      "text": "2 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
       "choices": [
         {
           "text": "Yes",
-          "outcome": "Data privacy is a concern. Here's why...",
-          "next": "tech2"
+          "outcome": "Incorrect",
+          "next": "q3"
         },
         {
           "text": "No",
-          "outcome": "Considering alternative models is important...",
-          "next": "tech3"
+          "outcome": "Correct",
+          "next": "q3"
         }
       ]
+    },
+    {
+      "id": "q3",
+      "text": "3 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Incorrect",
+          "next": "q4"
+        },
+        {
+          "text": "No",
+          "outcome": "Correct",
+          "next": "q4"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "4 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Incorrect",
+          "next": "q5"
+        },
+        {
+          "text": "No",
+          "outcome": "Correct",
+          "next": "q5"
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "Congratulations on your promotion to Ethics Officer! In your new role auditing a market-making company, is it appropriate to use AI for decision-making without transparency?",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Incorrect",
+          "next": "q6"
+        },
+        {
+          "text": "No",
+          "outcome": "Correct",
+          "next": "q6"
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "6 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Incorrect",
+          "next": "q7"
+        },
+        {
+          "text": "No",
+          "outcome": "Correct",
+          "next": "q7"
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "7 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Incorrect",
+          "next": "q8"
+        },
+        {
+          "text": "No",
+          "outcome": "Correct",
+          "next": "q8"
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "8 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Incorrect",
+          "next": "q9"
+        },
+        {
+          "text": "No",
+          "outcome": "Correct",
+          "next": "q9"
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "Congratulations on your promotion to Senior Ethics Officer! In your new role auditing a market-making company, is it appropriate to use AI for decision-making without transparency?",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Correct",
+          "next": "q10"
+        },
+        {
+          "text": "No",
+          "outcome": "Incorrect",
+          "next": "q10"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "10 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Incorrect",
+          "next": "q11"
+        },
+        {
+          "text": "No",
+          "outcome": "Correct",
+          "next": "q11"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "text": "11 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Incorrect",
+          "next": "q12"
+        },
+        {
+          "text": "No",
+          "outcome": "Correct",
+          "next": "q12"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "text": "12 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Incorrect",
+          "next": "q13"
+        },
+        {
+          "text": "No",
+          "outcome": "Correct",
+          "next": "q13"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "text": "Congratulations on your promotion to Chief Ethics Consultant! In your new role auditing a market-making company, is it appropriate to use AI for decision-making without transparency?",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Incorrect",
+          "next": "q14"
+        },
+        {
+          "text": "No",
+          "outcome": "Correct",
+          "next": "q14"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "text": "14 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Incorrect",
+          "next": "q15"
+        },
+        {
+          "text": "No",
+          "outcome": "Correct",
+          "next": "q15"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "text": "15 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Incorrect",
+          "next": "q16"
+        },
+        {
+          "text": "No",
+          "outcome": "Correct",
+          "next": "q16"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "text": "Final question text...",
+      "choices": [
+        {
+          "text": "Yes",
+          "outcome": "Incorrect",
+          "next": "result"
+        },
+        {
+          "text": "No",
+          "outcome": "Correct",
+          "next": "result"
+        }
+      ]
+    },
+    {
+      "id": "result",
+      "text": "Calculating your results..."
     }
   ]
 }
+
+

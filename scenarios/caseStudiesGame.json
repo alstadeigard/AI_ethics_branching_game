@@ -1,0 +1,46 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Question 1 text...",
+      "choices": [
+        {
+          "text": "Choice A",
+          "isCorrect": true
+        },
+        {
+          "text": "Choice B",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Question 2 text...",
+      "choices": [
+        {
+          "text": "Choice A",
+          "isCorrect": true
+        },
+        {
+          "text": "Choice B",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Question 3 text...",
+      "choices": [
+        {
+          "text": "Choice A",
+          "isCorrect": true
+        },
+        {
+          "text": "Choice B",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}
