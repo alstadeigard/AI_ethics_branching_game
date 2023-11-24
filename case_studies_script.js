@@ -39,11 +39,16 @@ function displayQuestion() {
 
 function handleChoice(isCorrect, readingLink) {
     const resultText = document.getElementById('resultText');
-    resultText.innerHTML = '';  // Clear previous feedback
+    const choicesContainer = document.getElementById('choicesContainer');
+    const buttons = choicesContainer.getElementsByTagName('button');
+
+    for (let button of buttons) {
+        button.disabled = true;
+    }
 
     if (isCorrect) {
         score++;
-        resultText.innerHTML = "Well done! Your decision did not mirror a real-world mistake. Learn more: <br><a href='" + readingLink + "' target='_blank'>Read more about this case</a><br>";
+        resultText.innerHTML = "Well done! Your decision aligns with recommended ethical practices in this scenario. Learn more: <br><a href='" + readingLink + "' target='_blank'>Read more about this case</a><br>";
     } else {
         resultText.innerHTML = "This choice mirrors a real-world mistake. Understanding these scenarios helps improve future AI development. Learn more: <br><a href='" + readingLink + "' target='_blank'>Read more about this case</a><br>";
     }
