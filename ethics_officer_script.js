@@ -1,4 +1,5 @@
 let scenarios, answers = [];
+let currentScenarioId = '';
 
 document.addEventListener('DOMContentLoaded', function() {
     loadGameData('scenarios/ethicsOfficerGame.json');
@@ -17,11 +18,11 @@ function loadGameData(filePath) {
 function displayScenario(scenarioId) {
     currentScenarioId = scenarioId;
     const scenario = scenarios.find(sc => sc.id === scenarioId);
-    if (!scenario) {
-        return;
-    }
+    if (!scenario) return;
 
-    document.getElementById('questionText').textContent = scenario.text;
+    const formattedText = scenario.text.replace(/\n/g, '<br>');
+
+    document.getElementById('questionText').innerHTML = formattedText;
     const choicesContainer = document.getElementById('choicesContainer');
     choicesContainer.innerHTML = '';
 
@@ -37,19 +38,23 @@ function displayScenario(scenarioId) {
 }
 
 function handleChoice(choice) {
-    answers.push({ question: currentScenarioId, outcome: choice.outcome });
-    const nextScenarioId = scenarios.find(sc => sc.id === currentScenarioId).choices.find(ch => ch.text === choice.text).next;
+    answers.push({
+        question: currentScenarioId,
+        outcome: choice.outcome,
+        reading: scenarios.find(sc => sc.id === currentScenarioId).reading
+    });
+
+    const nextScenarioId = choice.next;
 
     // Define promotion checkpoints
-    const promotionCheckpoints = ['q4', 'q8', 'q12', 'q16'];
+    const promotionCheckpoints = ['q4', 'q8', 'q12'];
 
     if (promotionCheckpoints.includes(currentScenarioId)) {
-        processResults(nextScenarioId, currentScenarioId === 'q16');
+        processResults(nextScenarioId, currentScenarioId === 'q12');
     } else {
         displayScenario(nextScenarioId);
     }
 }
-
 
 
 function processResults(nextScenarioId, isFinal) {
@@ -57,31 +62,34 @@ function processResults(nextScenarioId, isFinal) {
     const resultText = document.getElementById('resultText');
     const choicesContainer = document.getElementById('choicesContainer');
 
-    if (isFinal) {
-        // Clear the buttons for the final result display
-        choicesContainer.innerHTML = '';
+    // Clear the buttons for the result display
+    choicesContainer.innerHTML = '';
 
+    if (isFinal) {
         if (wrongAnswers.length === 0) {
             resultText.textContent = "Congratulations! You have successfully completed the entire game!";
-            // The game is complete. No further actions needed.
         } else {
-            resultText.textContent = "Unfortunately your boss deemed your performance wasn't adequate for a promotion. He sends you the following list of links for information related the cases you got wrong:\n" + wrongAnswers.map(answer => answer.question).join("\n");
-            const restartButton = document.createElement('button');
-            restartButton.textContent = 'Restart';
-            restartButton.onclick = () => location.reload();
-            document.getElementById('gameArea').appendChild(restartButton);
+            resultText.innerHTML = "Unfortunately you made some mistakes during your previous audit. Review the following links to learn where you went wrong:<br>"
+                + wrongAnswers.map(answer => `<a href="${answer.reading}" target="_blank">${answer.reading}</a>`).join("<br>")
+                + ". <br>Then, try again.";
+            createRestartButton();
         }
     } else {
-        // Handle non-final scenarios as before
         if (wrongAnswers.length === 0) {
-            resultText.textContent = "Congratulations on your promotion! Keep conducting audits to climb further up the career ladder.";
+            resultText.textContent = "Congratulations on your promotion! Moving on to the next set of questions...";
             displayScenario(nextScenarioId);
         } else {
-            resultText.textContent = "Unfortunately your boss deemed your performance wasn't adequate for a promotion. He sends you the following list of links for information related the cases you got wrong:\n" + wrongAnswers.map(answer => answer.question).join("\n");
-            const restartButton = document.createElement('button');
-            restartButton.textContent = 'Restart';
-            restartButton.onclick = () => location.reload();
-            document.getElementById('gameArea').appendChild(restartButton);
+            resultText.innerHTML = "Unfortunately you made some mistakes during your previous audit. Review the following links to learn where you went wrong:<br>"
+                + wrongAnswers.map(answer => `<a href="${answer.reading}" target="_blank">${answer.reading}</a>`).join("<br>")
+                + "<br>Then, try again.";
+            createRestartButton();
         }
     }
+}
+
+function createRestartButton() {
+    const restartButton = document.createElement('button');
+    restartButton.textContent = 'Restart';
+    restartButton.onclick = () => location.reload();
+    document.getElementById('gameArea').appendChild(restartButton);
 }
