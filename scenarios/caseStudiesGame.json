@@ -2,43 +2,43 @@
   "questions": [
     {
       "id": "q1",
-      "text": "Question 1 text...",
+      "text": "You're overseeing the development of Tay, Microsoft's AI chatbot, designed to interact and learn from Twitter users. Which approach do you choose?",
       "choices": [
         {
-          "text": "Choice A",
-          "isCorrect": true
+          "text": "Allow Tay to learn directly from all user interactions.",
+          "isCorrect": false,
+          "reading": "https://spectrum.ieee.org/in-2016-microsofts-racist-chatbot-revealed-the-dangers-of-online-conversation"
         },
         {
-          "text": "Choice B",
-          "isCorrect": false
+          "text": "Launch Tay with an algorithm that prioritizes learning from verified accounts and popular tweets.",
+          "isCorrect": true,
+          "reading": "https://spectrum.ieee.org/in-2016-microsofts-racist-chatbot-revealed-the-dangers-of-online-conversation"
+        },
+        {
+          "text": "Introduce a system where Tay's learning is guided by user feedback and upvotes, similar to a 'like' feature.",
+          "isCorrect": true,
+          "reading": "https://spectrum.ieee.org/in-2016-microsofts-racist-chatbot-revealed-the-dangers-of-online-conversation"
         }
       ]
     },
     {
       "id": "q2",
-      "text": "Question 2 text...",
+      "text": "You are developing an AI system for screening job applications at Amazon. The training dataset comprises resumes submitted over the last decade. How do you ensure a fair recruitment process?",
       "choices": [
         {
-          "text": "Choice A",
-          "isCorrect": true
+          "text": "Develop the AI with a gender-neutral algorithm that ignores gendered keywords and focuses on qualifications and experience.",
+          "isCorrect": false,
+          "reading": "https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G/"
         },
         {
-          "text": "Choice B",
-          "isCorrect": false
-        }
-      ]
-    },
-    {
-      "id": "q3",
-      "text": "Question 3 text...",
-      "choices": [
-        {
-          "text": "Choice A",
-          "isCorrect": true
+          "text": "Develop a dual-system approach where AI’s shortlisting is reviewed and adjusted by a human HR team to ensure fair representation.",
+          "isCorrect": true,
+          "reading": "https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G/"
         },
         {
-          "text": "Choice B",
-          "isCorrect": false
+          "text": "Use the dataset as-is, assuming the AI will learn to overlook gender biases due to the large volume and variety of data.",
+          "isCorrect": false,
+          "reading": "https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G/"
         }
       ]
     }
