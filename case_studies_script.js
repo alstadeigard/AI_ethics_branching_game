@@ -39,7 +39,12 @@ function displayQuestion() {
 
 function handleChoice(isCorrect, readingLink) {
     const resultText = document.getElementById('resultText');
-    resultText.innerHTML = '';  // Clear previous feedback
+    const choicesContainer = document.getElementById('choicesContainer');
+    const buttons = choicesContainer.getElementsByTagName('button');
+
+    for (let button of buttons) {
+        button.disabled = true;
+    }
 
     if (isCorrect) {
         score++;
