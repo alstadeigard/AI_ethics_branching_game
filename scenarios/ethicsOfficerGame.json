@@ -2,23 +2,25 @@
   "scenarios": [
     {
       "id": "q1",
-      "text": "1 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "text": "You've just started your new position as a junior ethics officer and are tasked with auditing an EU tech company called BrightFace that specialize in AI-driven facial recognition software. Your role is to ensure that the BrightFace's practices align with legal standards and ethical guidelines regarding AI and user privacy.\n\n Brightface wants to collect and process the facial data of users for training their AI models and claims this is allowed as long they explicitly ask for consent from users. Is this true?",
+      "reading": "https://gdpr-info.eu/art-9-gdpr/",
       "choices": [
         {
           "text": "Yes",
-          "outcome": "Incorrect",
+          "outcome": "Correct",
           "next": "q2"
         },
         {
           "text": "No",
-          "outcome": "Correct",
+          "outcome": "Incorrect",
           "next": "q2"
         }
       ]
     },
     {
       "id": "q2",
-      "text": "2 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "text": "BrightFace claims that they are using facial data for security purposes and therefore don't need to inform individuals about how their data is being processed. Is this true?",
+      "reading": "https://gdpr-info.eu/art-13-gdpr/",
       "choices": [
         {
           "text": "Yes",
@@ -34,7 +36,8 @@
     },
     {
       "id": "q3",
-      "text": "3 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "text": "The development team at BrightFace claims that their AI algorithms are completely automated and data-driven, and therefore none of their own human biases are implemented as part of the algorithm. They therefore claim that they do not require additional checks for discrimination. Is this valid?",
+      "reading": "https://gdpr-info.eu/recitals/no-71/",
       "choices": [
         {
           "text": "Yes",
@@ -50,7 +53,8 @@
     },
     {
       "id": "q4",
-      "text": "4 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "text": "BrightFace claims that once an individual has consented to their data being collected, the company then has complete ownership of the data and freedom to use it to train their AI systems, regardless of whether the individual changes their minds. Are they correct?",
+      "reading": "https://gdpr-info.eu/art-17-gdpr/",
       "choices": [
         {
           "text": "Yes",
@@ -66,23 +70,25 @@
     },
     {
       "id": "q5",
-      "text": "Congratulations on your promotion to Ethics Officer! In your new role auditing a market-making company, is it appropriate to use AI for decision-making without transparency?",
+      "text": "Congratulations on your successful audit of BrightFace! Your assessments have earned you a promotion. You've been promoted to an Ethics Officer and your next assignment is with IntelliHealth, a US company specializing in AI-driven healthcare analytics. IntelliHealth's AI algorithms are used in patient analysis and treatment recommendations. Your task is to ensure their methods comply with ethical standards and healthcare-specific regulations.\n\n IntelliHealth claim that as long as they anonymize their patient data, they can use it for training their AI models without asking the patient for consent. Is this true? ",
+      "reading": "https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html",
       "choices": [
         {
           "text": "Yes",
-          "outcome": "Incorrect",
+          "outcome": "Correct",
           "next": "q6"
         },
         {
           "text": "No",
-          "outcome": "Correct",
+          "outcome": "Incorrect",
           "next": "q6"
         }
       ]
     },
     {
       "id": "q6",
-      "text": "6 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "text": "IntelliHealth claims that explaining AI diagnostic process to all their patients is infeasible and not necessary as long as the results are accurate and unbiased. Is this an acceptable approach?",
+      "reading": "https://www.ama-assn.org/practice-management/digital/advancing-health-care-ai-through-ethics-evidence-and-equity",
       "choices": [
         {
           "text": "Yes",
@@ -98,7 +104,8 @@
     },
     {
       "id": "q7",
-      "text": "7 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "text": "IntelliHealth maintains that seeking patient consent for the usage of AI-tools in patient care isn't necessary as long as healthcare professionals are ultimately responsible for the diagnosis. Are they correct?",
+      "reading": "https://www.who.int/publications/i/item/9789240029200 (Most importantly that respect for human autonomy entails that people understand the role that AI systems play in their care.)",
       "choices": [
         {
           "text": "Yes",
@@ -114,7 +121,8 @@
     },
     {
       "id": "q8",
-      "text": "8 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "text": "IntelliHealth recently had a data breach were over 1000 local patients records were compromised. Through your investigation you find out that IntelliHealth did give individual notices to all the affected patients. Is this the only response they are required to make?",
+      "reading": "https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html",
       "choices": [
         {
           "text": "Yes",
@@ -130,23 +138,25 @@
     },
     {
       "id": "q9",
-      "text": "Congratulations on your promotion to Senior Ethics Officer! In your new role auditing a market-making company, is it appropriate to use AI for decision-making without transparency?",
+      "reading": "https://oecd.ai/en/dashboards/ai-principles/P7",
+      "text": "Good job on your audit of IntelliHealth! Your performance was exemplary, and has earned you a promotion to Senior Ethics Officer! Your next assignment is to audit AutoDrive, a company specializing in autonomous vehicles. Your task is to ensure AutoDrive's compliance with ethical standards and regulations.\n\n AutoDrive have copyrighted their technologies, and have come to an agreement with traffic authorities establishing that their models are unbiased and accurate. They do not disclose how the decisions by the AI algorithms are made, as this is proprietary information. Is this approach acceptable?",
       "choices": [
         {
           "text": "Yes",
-          "outcome": "Correct",
+          "outcome": "Incorrect",
           "next": "q10"
         },
         {
           "text": "No",
-          "outcome": "Incorrect",
+          "outcome": "Correct",
           "next": "q10"
         }
       ]
     },
     {
       "id": "q10",
-      "text": "10 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "reading": "https://ieeexplore.ieee.org/document/8814032",
+      "text": "AutoDrive have performed extensive simulation testing for their vehicles and they have performed better than human drivers. They now want to begin distribution. Is this ethically sound?",
       "choices": [
         {
           "text": "Yes",
@@ -162,15 +172,16 @@
     },
     {
       "id": "q11",
-      "text": "11 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "reading": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5173339/#:~:text=In%20such%20a%20situation%2C%20the,control%20of%20the%20vehicle%20immediately.",
+      "text": "How should AutoDrive handle critical system failure?",
       "choices": [
         {
-          "text": "Yes",
+          "text": "Immediately stop the vehicle",
           "outcome": "Incorrect",
           "next": "q12"
         },
         {
-          "text": "No",
+          "text": "Immediately hand control to the driver",
           "outcome": "Correct",
           "next": "q12"
         }
@@ -178,81 +189,18 @@
     },
     {
       "id": "q12",
-      "text": "12 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
+      "reading": "https://gdpr-info.eu/art-44-gdpr/",
+      "text": "AutoDrive stores user data from EU citizens in a country outside the EU. Is this allowed, assuming the country has adequate data protection and there are safeguards in place?",
       "choices": [
         {
           "text": "Yes",
-          "outcome": "Incorrect",
-          "next": "q13"
-        },
-        {
-          "text": "No",
           "outcome": "Correct",
           "next": "q13"
-        }
-      ]
-    },
-    {
-      "id": "q13",
-      "text": "Congratulations on your promotion to Chief Ethics Consultant! In your new role auditing a market-making company, is it appropriate to use AI for decision-making without transparency?",
-      "choices": [
-        {
-          "text": "Yes",
-          "outcome": "Incorrect",
-          "next": "q14"
         },
         {
           "text": "No",
-          "outcome": "Correct",
-          "next": "q14"
-        }
-      ]
-    },
-    {
-      "id": "q14",
-      "text": "14 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
-      "choices": [
-        {
-          "text": "Yes",
           "outcome": "Incorrect",
-          "next": "q15"
-        },
-        {
-          "text": "No",
-          "outcome": "Correct",
-          "next": "q15"
-        }
-      ]
-    },
-    {
-      "id": "q15",
-      "text": "15 As a junior ethics officer auditing a small tech company that builds webcams, is it ethical to collect data without user consent?",
-      "choices": [
-        {
-          "text": "Yes",
-          "outcome": "Incorrect",
-          "next": "q16"
-        },
-        {
-          "text": "No",
-          "outcome": "Correct",
-          "next": "q16"
-        }
-      ]
-    },
-    {
-      "id": "q16",
-      "text": "Final question text...",
-      "choices": [
-        {
-          "text": "Yes",
-          "outcome": "Incorrect",
-          "next": "result"
-        },
-        {
-          "text": "No",
-          "outcome": "Correct",
-          "next": "result"
+          "next": "q13"
         }
       ]
     },
